@@ -11,12 +11,11 @@ I compare two versions of the tracker on the same boxes:
 
 ## Files
 
-All my files are in the `tracking/` folder.
 
 | File | What it is |
 |---|---|
 | `README.md` | This file. |
-| `notebook46a1fe597b_5.ipynb` | My whole pipeline, written for Kaggle, saved with the outputs of my run. Cells 0 to 18 run the main experiment and cells 19 to 22 are my follow up on `thu0109`. |
+| `tracking.ipynb` | My whole pipeline, written for Kaggle, saved with the outputs of my run. Cells 0 to 18 run the main experiment and cells 19 to 22 are my follow up on `thu0109`. |
 | `identity_labels_template.csv` | My manual identity labels for `thu0109`: 150 boxes, `gt_id` 1 to 3. I filled in the template from the result folder and kept its file name, so it matches the path in `GT_ID_FILES`. |
 | `SeaDronesSee_MOT_NewVideos_Results_eaafa4cd8dfb3eda3339.zip` | Output of my run, see [Outputs](#outputs). It has the cached DINOv3 features, so the notebook can run again without a GPU. |
 | `thu0109_automatic_comparison.zip` | Output of the follow up (cells 19 to 22): the scores for all eight settings, the check of every link DINOv3 changed and the errors left in each method. |
