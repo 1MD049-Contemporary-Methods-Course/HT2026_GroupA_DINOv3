@@ -15,7 +15,7 @@ I compare two versions of the tracker on the same boxes:
 | File | What it is |
 |---|---|
 | `README.md` | This file. |
-| `tracking.ipynb` | My whole pipeline, written for Kaggle, saved with the outputs of my run. Cells 0 to 18 run the main experiment and cells 19 to 22 are my follow up on `thu0109`. |
+| `Tracking.ipynb` | My whole pipeline, written for Kaggle, saved with the outputs of my run. Cells 0 to 18 run the main experiment and cells 19 to 22 are my follow up on `thu0109`. |
 | `identity_labels_template.csv` | My manual identity labels for `thu0109`: 150 boxes, `gt_id` 1 to 3. I filled in the template from the result folder and kept its file name, so it matches the path in `GT_ID_FILES`. |
 | `thu0109_automatic_comparison.zip` | Output of the follow up (cells 19 to 22): the scores for all eight settings, the check of every link DINOv3 changed and the errors left in each method. |
 
@@ -115,7 +115,7 @@ A **link** is two boxes in a row that share an ID. For example, if ID 5 is on bo
 
 ## How to run (Kaggle)
 
-1. Import `tracking.ipynb` into Kaggle.
+1. Import `Tracking.ipynb` into Kaggle.
 2. **Add Input**: `ubiratanfilho/sds-dataset`.
 3. Set **Accelerator** to GPU T4, turn **Internet** on, and turn on the `HF_TOKEN` secret under **Add-ons → Secrets**. The Hugging Face account needs access to the DINOv3 model.
 4. **Run All**.
@@ -191,7 +191,8 @@ Cells 19 to 22 also write, inside `thu0109/`:
   - from cells 20 and 21: `automatic_summary.csv`, `appearance_contribution.csv`, `changed_links.csv`, `tracking_predictions.csv`, `experiment_settings.csv`, `constant_feature_controls.csv`, `experiment_protocol.json`;
   - from cell 22: `identity_link_metrics.csv` (P/R/F1 for the eight settings), `dino_changes_checked.csv` (whether each added link was correct and each removed link was wrong) and `link_errors.csv` (wrong and missing links left in each method).
 
-The follow-up results are included in this repository as `thu0109_automatic_comparison.zip`. Cell 18 generates the full results archive, `SeaDronesSee_MOT_NewVideos_Results_<key>.zip`, during the first run. I save that archive and attach it as a Kaggle input on later runs to reuse the cached DINOv3 features.
+
+The follow up results are included in this repository as `thu0109_automatic_comparison.zip`. Cell 18 generates the full results archive, `SeaDronesSee_MOT_NewVideos_Results_<key>.zip`, in every run. I save that archive and attach it as a Kaggle input on later runs to reuse the cached DINOv3 features.
 
 ## Labelling
 
