@@ -1,0 +1,1 @@
+# HT2026_GroupA_DINOv3
